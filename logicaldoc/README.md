@@ -24,8 +24,8 @@ Get ip of db container:
 docker inspect container-id
 
 
-docker run -itd --restart=always -e MYSQL_SERVER=logicaldoc-db -p 80 -p 8080:8080 -v \
-/data/logicaldoc-app:/backup:rw --name logicaldoc-app \
+docker run -itd --restart=always -e MYSQL_SERVER=logicaldoc-db -p 80 -p 8080 -v \
+/data/logicaldoc-app/LogicalDOC-Community:/LogicalDOC-Community:rw --name logicaldoc-app \
 --link logicaldoc-db:mysql logicaldoc-app 
 
 After the app run finishes you will need to run a command to start container.
