@@ -9,7 +9,7 @@ RUN /etc/elasticsearch/bin/plugin install mobz/elasticsearch-head; /etc/elastics
 
 RUN useradd elasticsearch; chown -R elasticsearch:elasticsearch /etc/elasticsearch
 
-ENV PATH=$PATH:/etc/elasticsearch/bin
+ENV PATH $PATH:/etc/elasticsearch/bin
 
 ENV JAVA_HOME  /usr/lib/jvm/jre-1.8.0
 
